@@ -1,0 +1,7 @@
+{
+    "hosts" : [
+        "localhost:8090",
+        "localhost:8091"
+    ],
+    "algorithm" : "round-robin"
+}
