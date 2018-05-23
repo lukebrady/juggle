@@ -11,6 +11,7 @@ type JuggleConfig struct {
 	Protocol  string   `json:"protocol"`
 	Hosts     []string `json:"hosts"`
 	Algorithm string   `json:"algorithm"`
+	Port      string   `json:"port"`
 }
 
 // ReadJuggleConfig will read in the juggle config from disk and return

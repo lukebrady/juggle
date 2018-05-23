@@ -14,5 +14,7 @@
     - Least Loaded: ll
     - Priority: pr
     */
-    "algorithm" : "rr"
+    "algorithm" : "rr",
+    // Default port 9080
+    "port" : ":9080"
 }
