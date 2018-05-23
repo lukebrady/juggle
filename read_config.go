@@ -8,6 +8,7 @@ import (
 
 // JuggleConfig is the struct that will hold juggle configuration data.
 type JuggleConfig struct {
+	Protocol  string   `json:"protocol"`
 	Hosts     []string `json:"hosts"`
 	Algorithm string   `json:"algorithm"`
 }

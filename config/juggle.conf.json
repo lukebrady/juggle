@@ -1,7 +1,18 @@
 {
-    "hosts" : [
+    // HTTP or HTTPS protocol.
+    "protocol" : "http",
+    // List of load-balanced hosts.
+    "hosts" : 
+    [
         "localhost:8090",
-        "localhost:8091"
+        "localhost:8091",
+        "localhost:8092"
     ],
-    "algorithm" : "round-robin"
+    /*
+    Available Algorithms:
+    - Round Robin: rr
+    - Least Loaded: ll
+    - Priority: pr
+    */
+    "algorithm" : "rr"
 }

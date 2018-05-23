@@ -4,7 +4,7 @@ package algorithms
 // information such as which host is currently receiving traffic.
 type RRLinkedList struct {
 	hosts   []HostObject
-	current HostObject
+	current uint
 	size    uint
 }
 
@@ -23,8 +23,20 @@ func NewRRLinkedList(hosts []string) *RRLinkedList {
 	}
 	// Return a RRLinkedList object to be used by juggle.
 	return &RRLinkedList{
-		current: hostObjs[0],
+		current: 0,
 		hosts:   hostObjs,
 		size:    uint(len(hosts)),
+	}
+}
+
+// NextHost increments the host for the round robin.
+func (l *RRLinkedList) NextHost() {
+	// Check to see if the list has been iterated through.
+	if l.current != l.size {
+		// Increment the current index to the next host in the slice.
+		l.current++
+	} else {
+		// If the list has been iterated through, go back to 0.
+		l.current = 0
 	}
 }
