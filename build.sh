@@ -1,2 +1,2 @@
 #!/bin/bash
-go build -o cmd/juggle main.go
+go build -o cmd/juggle ./
