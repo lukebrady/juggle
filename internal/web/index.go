@@ -4,12 +4,13 @@ import (
 	"net/http"
 )
 
-type Index struct {
+// IndexServer is the struct that keeps track of index server meta-data.
+type IndexServer struct {
 	protocol string
 	hosts []string
 }
 
-func IndexRoute(w http.ResponseWriter, r *http.Request) {
+func Route(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "GET" {
 		http.Get()
 	}
