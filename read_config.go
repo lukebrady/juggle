@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"os"
 )
@@ -28,6 +29,7 @@ func ReadJuggleConfig(path string) (*JuggleConfig, error) {
 	config := &JuggleConfig{}
 	// Read all of the JSON data from the config file into memory.
 	jsonData, err := ioutil.ReadAll(jsonConfig)
+	fmt.Println(string(jsonData))
 	if err != nil {
 		return nil, err
 	}
