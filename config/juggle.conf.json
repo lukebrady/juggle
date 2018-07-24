@@ -2,9 +2,8 @@
     "protocol" : "http",
     "hosts" : 
     [
-        "http://google.com",
-        "http://youtube.com",
-        "http://yahoo.com"
+        "http://localhost:8080",
+        "http://localhost:8081"
     ],
     "algorithm" : "rr",
     "port" : ":9080"

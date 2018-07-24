@@ -38,9 +38,9 @@ func (i *IndexServer) Route(w http.ResponseWriter, r *http.Request) {
 		}
 		// Now increment the host in the load-balancer.
 		fmt.Println(i.rr.current)
-		i.rr.NextHost()
 		// Write the html data.
 		w.Write(html)
 		w.WriteHeader(http.StatusOK)
+		i.rr.NextHost()
 	}
 }
